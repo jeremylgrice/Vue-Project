@@ -7,7 +7,12 @@
         </div>
         <ul v-else>
             <li v-for="product in products" :key="product.id">
-                {{ product.title }} - {{ product.price }}
+                Product: {{product.title}} 
+                <br>
+                Price: ${{product.price}}
+                <br>
+                Qty: {{product.inventory}}
+                <br>
                 <button @click="addProductToCart(product)">Add to cart</button>
             </li>
         </ul>
@@ -40,9 +45,3 @@ export default {
     },
 }
 </script>
-
-<style>
-li {
-  list-style-type: none;
-}
-</style>
